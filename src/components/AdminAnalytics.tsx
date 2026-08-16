@@ -483,6 +483,7 @@ export const AdminAnalyticsView: React.FC<AdminAnalyticsProps> = ({ onBackToCust
       )}
 
       {/* Tab 3: Database & API Specification Inspector */}
+
       {(activeTab === 'schema' || showSchemaModal) && (
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 space-y-6">
           <div className="flex items-center justify-between border-b border-slate-800 pb-4">
@@ -503,36 +504,6 @@ export const AdminAnalyticsView: React.FC<AdminAnalyticsProps> = ({ onBackToCust
                 Close View
               </button>
             )}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
-            {/* Schema Definitions */}
-            <div className="space-y-3 font-mono bg-slate-950 p-4 rounded-2xl border border-slate-800 overflow-x-auto">
-              <p className="text-amber-400 font-bold font-sans text-xs mb-2">// PostgreSQL / Prisma Models</p>
-              <div className="text-slate-300 space-y-2">
-                <p><span className="text-indigo-400 font-bold">model User</span> &#123; id, email, password, name, role (USER, ADMIN), addresses[] &#125;</p>
-                <p><span className="text-indigo-400 font-bold">model Restaurant</span> &#123; id, name, description, image, rating, deliveryTime, cuisineTags[] &#125;</p>
-                <p><span className="text-indigo-400 font-bold">model MenuItem</span> &#123; id, restaurantId, name, description, price, category, dietaryTags[] &#125;</p>
-                <p><span className="text-indigo-400 font-bold">model Order</span> &#123; id, userId, restaurantId, totalAmount, status (PENDING, PREPARING, SHIPPED, DELIVERED), items[] &#125;</p>
-                <p><span className="text-indigo-400 font-bold">model Payment</span> &#123; id, orderId, razorpayPaymentId, status, amount &#125;</p>
-              </div>
-            </div>
-
-            {/* API Endpoints & Razorpay Setup */}
-            <div className="space-y-3 font-mono bg-slate-950 p-4 rounded-2xl border border-slate-800 overflow-x-auto">
-              <p className="text-amber-400 font-bold font-sans text-xs mb-2">// Implemented API Endpoints & Keys</p>
-              <div className="text-slate-300 space-y-2 text-[11px]">
-                <p className="text-emerald-400">GET  /api/restaurants <span className="text-slate-400 font-sans">(filters: cuisine, search, minRating)</span></p>
-                <p className="text-emerald-400">GET  /api/restaurants/:id/menu <span className="text-slate-400 font-sans">(grouped categories)</span></p>
-                <p className="text-blue-400">POST /api/orders <span className="text-slate-400 font-sans">(creates order & Razorpay instance)</span></p>
-                <p className="text-blue-400">POST /api/payments/verify <span className="text-slate-400 font-sans">(verifies signature & sets PREPARING)</span></p>
-                <p className="text-purple-400">GET  /api/admin/analytics <span className="text-slate-400 font-sans">(revenue, volume & metrics)</span></p>
-                <div className="pt-2 border-t border-slate-800 text-slate-400 text-[10px]">
-                  <p>RAZORPAY_KEY_ID: <span className="text-white">rzp_test_TGoRVYEd8imVBf</span></p>
-                  <p>RAZORPAY_KEY_SECRET: <span className="text-white font-mono">trvSoqJei0t86N54sHn8EJmq</span></p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       )}
