@@ -117,10 +117,10 @@ npm start
 | `POST` | `/api/users/address` | Save new delivery address |
 
 ---
-Use Card Payment in The Razorpay gateway - Credentials:
-Card number: 4100 2800 0000 1007
-Date of expiry: Add any date which is not yet expired (Ex. 04/29)
-CVV: Any 3 digit number (Ex. 123)
+** Use Card Payment in The Razorpay gateway - Credentials:
+- *Card number*: 4100 2800 0000 1007
+- *Date of expiry*: Add any date which is not yet expired (Ex. 04/29)
+- *CVV*: Any 3 digit number (Ex. 123)
 
 ## 🔒 Security & Privacy
 
