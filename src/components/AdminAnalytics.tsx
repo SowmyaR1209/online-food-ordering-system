@@ -141,7 +141,6 @@ export const AdminAnalyticsView: React.FC<AdminAnalyticsProps> = ({ onBackToCust
               : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
           }`}
         >
-          PostgreSQL / Prisma Architecture
         </button>
       </div>
 
