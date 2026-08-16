@@ -1,0 +1,6 @@
+{
+  "name": "BiteDash",
+  "description": "Food delivery and restaurant ordering platform with Razorpay checkout, live order tracking, menu customization, and admin revenue analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

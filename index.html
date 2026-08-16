@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BiteDash | Delicious Food Delivered Fast</title>
+    <meta name="description" content="Discover top restaurants, order gourmet dishes, track real-time delivery, and manage restaurant analytics with BiteDash." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      // Gracefully handle benign Vite HMR websocket reconnection attempts in dev sandbox
+      window.addEventListener('unhandledrejection', function(event) {
+        if (
+          event.reason &&
+          (typeof event.reason.message === 'string' || typeof event.reason === 'string') &&
+          ((event.reason.message || event.reason).includes('WebSocket closed without opened') ||
+           (event.reason.message || event.reason).includes('failed to connect to websocket'))
+        ) {
+          event.preventDefault();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        if (
+          event.message &&
+          (event.message.includes('WebSocket closed without opened') ||
+           event.message.includes('failed to connect to websocket'))
+        ) {
+          event.preventDefault();
+        }
+      });
+    </script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js" async></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased font-['Plus_Jakarta_Sans',sans-serif]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
